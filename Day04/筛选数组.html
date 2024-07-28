@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>筛选数组</title>
+    <script>
+
+        // 方法一
+        let newArr = []
+        let j = 0
+        let arr = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7]
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] >= 10) {
+                newArr[j] = arr[i]
+                j++
+            }
+        }
+        console.log(newArr);
+
+        // 方法二
+        let newArr1 = []
+        let arr1 = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7]
+        // 刚开始 newArr1.length 就是 0
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] >= 10) {
+                newArr[newArr1.length] = arr[i]
+            }
+        }
+        console.log(newArr);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

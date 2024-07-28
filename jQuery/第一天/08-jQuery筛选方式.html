@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jQuery.min.js"></script>
+</head>
+
+<body>
+    <div class="grantfather">
+        <div class="father">
+            <div class="son">儿子</div>
+        </div>
+    </div>
+
+    <div class="nav">
+        <p>我是皮</p>
+        <div>
+            <p>我是p</p>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            //1.父 parent() 返回的是最近一级的父级元素
+            console.log($('.son').parent());
+            //2.子
+            $('.nav').children('p').css('color', 'pink')
+            $('.nav').find('p').css('color', 'red')
+            // console.log();
+        })
+    </script>
+</body>
+
+</html>

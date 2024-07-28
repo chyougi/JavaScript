@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>猜数字游戏</title>
+    <script>
+        function guessNum() {
+            let num = Math.floor(Math.random() * (10 - 1 + 1) + 1);
+            let num1 = prompt('请输入1-10之间的数字（包含1和10）');
+            let flag = 1;
+            while (flag < 3) {
+                if (num1 > num) {
+                    alert('您猜的数字大了，请再输入');
+                    num1 = prompt('请再输入1-10之间的数字（包含1和10）');
+                    flag++;
+                } else if (num1 < num) {
+                    alert('您猜的数字小了，请再输入');
+                    num1 = prompt('请再输入1-10之间的数字（包含1和10）');
+                    flag++;
+                } else {
+                    alert('您猜对了！');
+                    break;
+                }
+            }
+            alert('对不起，您的机会用完了');
+        }
+
+        guessNum();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

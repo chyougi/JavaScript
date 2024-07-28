@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>倒计时</title>
+    <script>
+        function countDown(time) {
+            let future = +new Date(time);
+            let now = +new Date();
+            let second = parseInt((future - now) / 1000 % 60);
+            second = second < 10 ? '0' + second : second;
+            let minute = parseInt((future - now) / 1000 / 60 % 60);
+            minute = minute < 10 ? '0' + minute : minute;
+            let hours = parseInt((future - now) / 1000 / 60 / 60 % 24);
+            hours = hours < 10 ? '0' + hours : hours;
+            let day = parseInt((future - now) / 1000 / 60 / 60 / 24);
+            day = day < 10 ? '0' + day : day;
+            return day + '天' + hours + '小时' + minute + '秒' + second + '秒';
+        }
+        console.log(countDown('2023-10-10 00:00:00'));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

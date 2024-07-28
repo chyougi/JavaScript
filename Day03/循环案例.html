@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>循环案例</title>
+    <script>
+        let sum = 0
+        let average = 0
+        for (let i = 0; i <= 100; i++) {
+            average = (sum += i) / 100;
+        }
+        console.log(average);
+
+
+        let even = 0;
+        let odd = 0;
+        for (let i = 1; i <= 100; i++) {
+            i % 2 == 0 ? even += i : odd += i
+        }
+        console.log('1~100之间所有的偶数和是' + even);
+        console.log('1~100之间所有的奇数和是' + odd);
+
+        let num = 0;
+        for (let i = 1; i <= 100; i++) {
+            if (i % 3 == 0) {
+                num += i
+            };
+        }
+        console.log(num);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

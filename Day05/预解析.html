@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>预解析</title>
+    <script>
+        let num = 10;
+        console.log(num);
+
+        // fn();
+        // let fn = function (){
+        //     console.log('Hello');
+        // }
+
+
+        f1();
+        console.log('外层c==='+c);
+        console.log('外层b==='+b);
+        console.log('外层a==='+a);
+        function f1(){
+            let a = b = c = 9; //相当于b 和 c 直接赋值，没有let声明 当 全局变量看
+            //集体声明 let a = 9, b = 9, c = 9
+            console.log('内层a==='+a);
+            console.log('内层b==='+b);
+            console.log('内层c==='+c);
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

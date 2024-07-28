@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>显示当前系统时间</button>
+    <div>某个时间</div>
+    <script>
+        //当我们点击了按钮，div里面的文字会发生变化
+        //1.获取元素
+        let btn = document.querySelector('button');
+        let div = document.querySelector('div');
+        //2.注册事件
+        btn.onclick = function () {
+            div.innerText = getDate();
+        }
+        function getDate() {
+            let date = new Date();
+            let year = date.getFullYear();
+            let month = date.getMonth() + 1;
+            let day = date.getDate();
+            return year + '年' + month + '月' + day + '日';
+        }
+    </script>
+</body>
+
+</html>

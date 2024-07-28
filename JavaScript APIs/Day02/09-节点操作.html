@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>我是div</div>
+    <span>我是span</span>
+    <ul>
+        <li>我是li</li>
+        <li>我是li</li>
+        <li>我是li</li>
+        <li>我是li</li>
+    </ul>
+    <div class="box">
+        <span class="erweima">×</span>
+    </div>
+    <script>
+        //1.父节点 parentNode
+        const erweima = document.querySelector('.erweima');
+        // 以前的写法
+        // const box = document.querySelector('.box');
+        // 现在的写法
+        // 选择的是离本节点最近的父级节点
+        console.log(erweima.parentNode);
+
+        // 2.子节点 childNodes
+        const ul = document.querySelector('ul');
+        //以前的写法
+        // const lis = ul.querySelectorAll('li');
+        //现在的写法
+        // let lis = ul.childNodes;
+        console.log(ul.children);
+
+        // 3.获取第一个子元素和最后一个子元素
+        //firstChild 获取第一个子节点 不管是文本节点还是元素节点
+        console.log(ul.firstChild);
+        console.log(ul.lastChild);
+        //3.2 firstElementChild 获取第一个子元素节点
+        console.log(ul.firstElementChild);
+        console.log(ul.lastElementChild);
+        // 3.3实际开发的写法 既没有兼容性问题有返回第一个子元素
+        console.log(ul.children[0]);
+        console.log(ul.children[ul.children.length - 1]);
+    </script>
+</body>
+
+</html>

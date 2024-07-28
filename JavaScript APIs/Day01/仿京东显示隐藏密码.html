@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            position: relative;
+            width: 400px;
+            border-bottom: 1px solid #ccc;
+            margin: 100px auto;
+        }
+
+        .box input {
+            width: 370px;
+            height: 30px;
+            border: 0;
+            outline: none;
+        }
+
+        .box img {
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            width: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <label for="">
+            <img src="./img/close.png" alt="">
+        </label>
+        <input type="password">
+    </div>
+
+    <script>
+        //1.获取元素
+        let img = document.querySelector('img');
+        let input = document.querySelector('input');
+        let flag = true;
+
+        img.onclick = function () {
+            if (flag) {
+                img.src = "./img/open.png";
+                input.type = 'text';
+                flag = false;
+            } else {
+                img.src = "./img/close.png";
+                input.type = 'password';
+                flag = true;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        console.log(location.search); // ?uname = zhang
+        //1.先去掉问号 substr('起始的位置', 截取几个字符)
+        let params = location.search.substr(1);//uname = zhang
+        console.log(params);
+        //2.利用等号把字符串分割为数组 split('=');
+        let arr = params.split('=');
+        console.log(arr);
+        let greeting = document.querySelector('div');
+        greeting.innerHTML = arr[1]+'欢迎您';
+    </script>
+</body>
+</html>

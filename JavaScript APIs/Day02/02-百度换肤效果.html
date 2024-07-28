@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background:  center top;
+        }
+
+        .theme {
+            width: 660px;
+            margin: 100px auto;
+        }
+
+        img {
+            /* display: inline-block; */
+            width: 160px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="theme">
+        <img src="./images/1.jpg" alt="">
+        <img src="./images/2.jpg" alt="">
+        <img src="./images/3.jpg" alt="">
+        <img src="./images/4.jpg" alt="">
+    </div>
+    <script>
+        //1.获取元素
+        const imgs = document.getElementsByTagName('img');
+        //2.注册事件
+        for (let i = 0; i < imgs.length; i++) {
+            imgs[i].onclick = function () {
+                document.body.style.backgroundImage = 'url(' + this.src + ')';
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>

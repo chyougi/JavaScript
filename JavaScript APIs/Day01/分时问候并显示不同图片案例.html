@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #bg {
+            width: 100%;
+            height: 500px;
+        }
+
+        button {
+            width: 150px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <button>更换模式</button>
+    <div id="bg">
+        <div id="word">晚上好</div>
+    </div>
+    <script>
+        //根据系统不同时间来判断，所以需要用到日期内置对象
+        //利用多分支语句来设置不同的图片
+        //需要一个图片，并且根据时间修改图片，就需要用到操作元素src属性
+        //需要一个div元素，显示不同问候语，修改元素内容即可
+        let date = new Date();
+        let hours = date.getHours();
+        console.log(hours);
+        let bg = document.getElementById('bg');
+        let word = document.getElementById('word');
+        let btn = document.querySelector('button');
+        let flag = true;
+        if (hours >= 18) {
+            bg.style.backgroundColor = '#2c2c2c';
+            word.style.color = 'white';
+        }else{
+            word.innerHTML = '白天好';
+            flag = false;
+        }
+        btn.onclick = function () {
+            if (flag) {
+                bg.style.backgroundColor = 'white';
+                word.style.color = 'black';
+                word.innerHTML = '白天好';
+                flag = false;
+                console.log(flag);
+            } else {
+                bg.style.backgroundColor = '#2c2c2c';
+                word.style.color = 'white';
+                word.innerHTML = '晚上好';
+                flag = true;
+                console.log(flag);
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>逻辑中断</title>
+    <script>
+        // 逻辑与
+        console.log(123 && 456);
+        console.log(0 && 456);
+        console.log(456 && 0 && 123);
+        // 逻辑或
+        console.log(123 || 456);
+        console.log(0 || 456);
+        console.log(0 || 456 || 123);
+        //逻辑运算会影响运算结果
+        let num = 1;
+        console.log(123 || num * 2);
+        console.log(num++ + ++num);
+        console.log(num);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

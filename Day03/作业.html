@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作业</title>
+    <script>
+        // let sum = 0;
+        // for (let i = 1; i <= 100; i++) {
+        //     sum += i;
+        // }
+        // console.log(sum);
+        // console.log(sum / 100);
+
+        // let even = 0;
+        // for (let i = 1; i <= 100; i++) {
+        //     if (i % 2 == 0) {
+        //         even += i;
+        //     }
+        // }
+        // console.log(even);
+
+        // let sum = 0;
+        // for (let i = 1; i <= 100; i++) {
+        //     if (i % 7 == 0) {
+        //         sum += i;
+        //     }
+        // }
+        // console.log(sum);
+
+        // let star = '';
+        // for (let i = 1; i <= 5; i++) {
+        //     for (let j = 1; j <= 5; j++) {
+        //         star = star + '⭐';
+        //     }
+        //     star = star + '\n'
+        // }
+        // console.log(star);
+
+        // let star = '';
+        // for (let i = 1; i <= 5; i++) {
+        //     for (let j = 1; j <= i; j++) {
+        //         star = star + '⭐';
+        //     }
+        //     star = star + '\n'
+        // }
+        // console.log(star);
+
+        // ATM
+        let money = 0;
+        do {
+            let choice = prompt('请输入')
+            if (choice == 1) {
+                money = money + parseFloat(prompt('请输入存款金额'));
+                alert('您的帐户余额为' + money + '元');
+            } else if (choice == 2) {
+                money = money - parseFloat(prompt('请输入取款金额'));
+                alert('您的帐户余额为' + money + '元');
+            } else if (choice == 3) {
+                alert('您的帐户余额为' + money + '元');
+            }else if(choice == 4){
+                alert('您正在退出');
+                break;
+            }
+        } while (true)
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

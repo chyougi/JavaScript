@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作业</title>
+    <script>
+        function Computer(color, weight, model) {
+            this.color = color;
+            this.weight = weight;
+            this.model = model;
+            this.function = function () {
+                console.log('看电影');
+                console.log('听音乐');
+                console.log('打游戏');
+                console.log('敲代码');
+            }
+        }
+        let HP = new Computer('黑色', '2KG', '暗影精灵7')
+        console.log(HP.color + '||' + HP.weight + '||' + HP.model);
+        HP.function();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

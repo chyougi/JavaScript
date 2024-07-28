@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简易计算器</title>
+    <script>
+        while (true) {
+            let num = prompt('欢迎使用简易计算器：\n 1.加法运算：\n 2.减法运算： \n 3.乘法运算： \n 4.除法运算： \n 5.退出 \n 请输入您的选项：');
+            if (num == 1) {
+                let num1 = Number(prompt('请输入第一个值：'));
+                let num2 = Number(prompt('请输入第二个值：'));
+                alert(num1 + num2);
+            } else if (num == 2) {
+                let num1 = Number(prompt('请输入第一个值：'));
+                let num2 = Number(prompt('请输入第二个值：'));
+                alert(num1 - num2);
+            } else if (num == 3) {
+                let num1 = Number(prompt('请输入第一个值：'));
+                let num2 = Number(prompt('请输入第二个值：'));
+                alert(num1 * num2);
+            } else if (num == 4) {
+                let num1 = Number(prompt('请输入第一个值：'));
+                let num2 = Number(prompt('请输入第二个值：'));
+                alert(num1 / num2);
+            } else if (num == 5) {
+                alert('正在退出');
+                break;
+            } else {
+                alert('请输入范围内的数字')
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

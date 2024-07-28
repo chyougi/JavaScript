@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <img src="angel.gif" alt="">
+    <script>
+        let pic = document.querySelector('img');
+        document.addEventListener('mousemove', function (e) {
+            //1. mousemove 只要鼠标移动1px 就会触发这个事件
+            let x = e.pageX;
+            let y = e.pageY;
+            pic.style.left = x - pic.width/2 + "px";
+            pic.style.top = y - pic.height/2 + "px";
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="F14">F14</button>
+    <button id="F35">F35</button>
+    <img src="./img/515bb491ad339692cb0aea0d05f3fd16.jpg" alt="" title="F14">
+
+    <script>
+        //修改元素属性
+        //1.获取元素
+        let f14 = document.getElementById('F14');
+        let f35 = document.getElementById('F35');
+        let img = document.querySelector('img');
+        //2.注册事件
+        f35.onclick = function(){
+            img.src = "./img/94395200aaf78410399ed41d1f443600e76288b7.jpg";
+            img.title = 'F35';
+        }
+        f14.onclick = function(){
+            img.src = "./img/515bb491ad339692cb0aea0d05f3fd16.jpg";
+            img.title = 'F14';
+        }
+    </script>
+</body>
+</html>

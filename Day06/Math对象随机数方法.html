@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math对象随机数方法</title>
+    <script>
+        console.log(Math.random());
+
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * max);
+        }
+        console.log(getRandomInt(11));
+
+
+        //左闭右开
+        function getRandom(min, max) {
+            max = Math.floor(max);
+            min = Math.ceil(min);
+            return Math.floor(Math.random() * (max - min) + min);
+        }
+        console.log(getRandom(5, 11));
+
+        //左闭右闭
+        function getRandom(min, max) {
+            max = Math.floor(max);
+            min = Math.ceil(min);
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+        console.log(getRandom(100000, 999999));
+
+        let arr = ['张三', '李四', '王五', '狗剩', '嘎子'];
+        function dianMin(arr) {
+            let num = Math.floor(Math.random() * arr.length);
+            return arr[num];
+        }
+        console.log(dianMin(arr));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
